@@ -6,7 +6,7 @@ def bookDict(lista, numbooks):
     for i in range(numbooks):
         newDict[i] = lista[i]
     return newDict
-def libDict(numLib, bookDict, listSign, idList):
+def libDict(numLib, bookDict, listSign, idList, rateList):
     newDict = {}
     for i in range(numLib):
         otherDict = {}
@@ -14,5 +14,5 @@ def libDict(numLib, bookDict, listSign, idList):
         for j in x:
             otherDict[j] = bookDict[j]
         otherDict = dictSort(otherDict)
-        newDict[i] = [otherDict, listSign[i]]
+        newDict[i] = [otherDict, listSign[i], rateList[i]]
     return newDict

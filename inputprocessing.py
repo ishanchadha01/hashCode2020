@@ -1,6 +1,7 @@
 from dictSort import bookDict
-from dictSort import beast
+from dictSort import libDict
 from dictSort import dictSort
+
 data = [
     "a_example.txt",
     "b-read_on.txt",
@@ -22,20 +23,17 @@ def createLibrary(file):
             booklist.append(int(line[i]))
         liblist = []
         signuplist = []
+        ratelist = []
         for i in range(numlibs):
             line = f.readline().split(" ")
             numbooks = int(line[0])
             signup = int(line[1])
             rate = int(line[2])
             signuplist.append(signup)
+            ratelist.append(rate)
             libbooks = []
             line = f.readline().split(" ")
             for j in range(numbooks):
                 libbooks.append(int(line[j]))
             liblist.append(libbooks)
-        return(booklist, signuplist, liblist)
-
-
-lib = createLibrary("input/a_example.txt")
-
-print(libDict(2, bookDict(lib[0],len(lib[0])), lib[1], lib[2]))
+        return(booklist, signuplist, liblist, ratelist, days)

@@ -32,5 +32,3 @@ def createLibrary(file):
             liblist.append(libbooks)
         return(booklist, signuplist, liblist)
 
-
-createLibrary("input/a_example.txt")

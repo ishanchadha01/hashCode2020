@@ -1,3 +1,6 @@
+from dictSort import bookDict
+from dictSort import beast
+from dictSort import dictSort
 data = [
     "a_example.txt",
     "b-read_on.txt",
@@ -33,4 +36,6 @@ def createLibrary(file):
         return(booklist, signuplist, liblist)
 
 
-createLibrary("input/a_example.txt")
+lib = createLibrary("input/a_example.txt")
+
+print(libDict(2, bookDict(lib[0],len(lib[0])), lib[1], lib[2]))
